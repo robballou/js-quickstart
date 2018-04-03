@@ -1,0 +1,15 @@
+{
+  "name": "js-quickstart",
+  "version": "1.0.0",
+  "description": "A project template for quickly starting a JS project",
+  "main": "index.js",
+  "author": "Rob Ballou",
+  "license": "MIT",
+  "devDependencies": {
+    "eslint": "^4.19.1"
+  },
+  "scripts": {
+    "lint": "eslint",
+    "lint:ci": "eslint --quiet"
+  }
+}
