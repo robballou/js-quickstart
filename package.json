@@ -2,14 +2,41 @@
   "name": "js-quickstart",
   "version": "1.0.0",
   "description": "A project template for quickly starting a JS project",
-  "main": "index.js",
+  "main": "src/index.js",
   "author": "Rob Ballou",
   "license": "MIT",
   "devDependencies": {
-    "eslint": "^4.19.1"
+    "@babel/cli": "^7.2.3",
+    "@babel/core": "^7.2.2",
+    "@babel/preset-env": "^7.3.1",
+    "@babel/preset-react": "^7.0.0",
+    "babel-loader": "^8.0.5",
+    "css-loader": "^2.1.1",
+    "eslint": "^5.15.3",
+    "eslint-plugin-jest": "^22.4.1",
+    "eslint-plugin-react": "^7.12.4",
+    "file-loader": "^3.0.1",
+    "html-webpack-plugin": "^3.2.0",
+    "jest": "^24.5.0",
+    "sass-loader": "^7.1.0",
+    "style-loader": "^0.23.1",
+    "webpack": "^4.29.0",
+    "webpack-cli": "^3.3.0",
+    "webpack-dev-server": "^3.2.1",
+    "webpack-merge": "^4.2.1"
   },
   "scripts": {
+    "setup": "rm .gitignore && mv .gitignore.main .gitignore && yarn install",
+    "build": "webpack --config webpack.production.config.js",
+    "build:dev": "webpack --config webpack.dev.config.js",
+    "start:dev": "webpack-dev-server --config webpack.dev.config.js",
+    "test": "jest",
+    "test:watch": "jest --watch",
     "lint": "eslint",
     "lint:ci": "eslint --quiet"
+  },
+  "dependencies": {
+    "react": "^16.8.6",
+    "react-dom": "^16.8.6"
   }
 }
