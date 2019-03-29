@@ -27,7 +27,7 @@
     "webpack-merge": "^4.2.1"
   },
   "scripts": {
-    "setup": "rm .gitignore && mv .gitignore.main .gitignore && yarn install",
+    "setup": "rm .gitignore && mv .gitignore.main .gitignore && rm -fr .git && yarn install",
     "build": "webpack --config webpack.production.config.js",
     "build:dev": "webpack --config webpack.dev.config.js",
     "start:dev": "webpack-dev-server --config webpack.dev.config.js",
